@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator BMI"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Wybór płci -->
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mężczyzna"
+                android:checked="true"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kobieta"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+
+        <!--podanie wagi -->
+        <EditText
+            android:id="@+id/weightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Wprowadź wagę (kg)"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp"/>
+
+        <!--podanie wzrostu -->
+        <EditText
+            android:id="@+id/heightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Wprowadź wzrost (cm)"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="20dp"/>
+
+        <!--obliczenie bmi -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz BMI"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!--zapisanie wyniku -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz wynik"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!--pokaz idealna wage -->
+        <Button
+            android:id="@+id/idealWeightButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokaż idealną wagę"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <!--wynik bmi -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"/>
+
+        <!--zdjecie -->
+        <ImageView
+            android:id="@+id/bmiImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/bmi"
+            android:contentDescription="Obrazek BMI"
+            android:layout_marginBottom="20dp"/>
+
+        <!--ostatnbik zapisany wynik-->
+        <TextView
+            android:id="@+id/lastResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ostatni zapisany wynik: brak"
+            android:textColor="#555555"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <!--idealna waga wynik -->
+        <TextView
+            android:id="@+id/idealWeightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#9C27B0"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
